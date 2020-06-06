@@ -1,0 +1,22 @@
+<div
+	class="header"
+	:class="scrollY > 200 || this.$route.path != '/' ? 'scrolled' : 'transparent'"
+>
+	<div class="container">
+		<router-link :to="{path: '/'}">
+			<img class="logo-image" src="@images/logo.svg" alt="" />
+		</router-link>
+		<div class="menu">
+			<div v-for="item in menu" :key="item.path" v-show="item.name">
+				<router-link
+					class="menu-link"
+					:to="{path: item.path}"
+					v-html="item.name"
+				/>
+				<!-- <div v-if="item.children && item.children.length > 0">
+          {{item.children}}
+        </div> -->
+			</div>
+		</div>
+	</div>
+</div>

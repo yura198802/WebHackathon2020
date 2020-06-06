@@ -1,0 +1,13 @@
+<div class="products section">
+  <div class="container">
+    <h1>Наши продукты</h1>
+    <div class="row">
+      <div class="service" v-for="service in services" :key="service.title">
+        <h3 class="title">{{service.title}}</h3>
+        <div class="description">{{service.text}}</div>
+        <div class="cost">{{service.cost}}</div>
+        <div class="btn">Оставить заявку</div>
+      </div>
+    </div>
+  </div>
+</div>

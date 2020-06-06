@@ -1,0 +1,92 @@
+@import "@/assets/styles/global.scss";
+
+.header {
+	height: 100px;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	transition: $transition;
+	@include flex(center, center);
+	.container {
+		@include flex(space-between, center);
+		@include contain();
+		padding: 0 20px;
+	}
+
+	.logo {
+		&-image {
+			height: 64px;
+			width: auto;
+		}
+	}
+	.menu {
+		@include flex();
+		&-link {
+			display: block;
+			height: 100px;
+			line-height: 60px;
+			padding: 20px;
+			text-decoration: none;
+			font-weight: 400;
+			transition: $transition;
+		}
+	}
+	.phone-link {
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 20.5px;
+		display: block;
+		height: 60px;
+		line-height: 60px;
+	}
+	.feedback {
+		@include flex(center, center, nowrap, column);
+	}
+	.button {
+		padding: 0 20px 0;
+		box-sizing: border-box;
+		background: white;
+		font-weight: 700;
+		text-transform: uppercase;
+		height: 40px;
+		line-height: 40px;
+		cursor: pointer;
+	}
+
+	&.scrolled {
+		box-shadow: $shadow1;
+		background: $blue;
+
+		.menu-link {
+			color: $sky;
+			&:hover {
+				color: $white;
+			}
+			&.router-link-active {
+				border-bottom: $sky 3px solid;
+				color: $white;
+			}
+		}
+		// .phone-link {
+		//   color: #c10230;
+		// }
+	}
+	&.transparent {
+		.menu-link {
+			background: transparent;
+			color: $sky;
+			&:hover {
+				color: $white;
+			}
+			&.router-link-active {
+				border-bottom: white 3px solid;
+				color: $white;
+			}
+		}
+		// .phone-link {
+		//   color: white;
+		// }
+	}
+}

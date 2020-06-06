@@ -1,0 +1,14 @@
+<div class="tags row">
+  <div v-for="(tag, index) in items" :key="index" class="tag">
+    <img src="images/phone-laptop.svg" width="50px" />
+    <h3 v-html="tag.title" />
+    <p class="descr" v-html="tag.description" />
+  </div>
+  <div class="tag">
+    <p class="descr">Надежные решения с 2003 года</p>
+    <p class="slogan">
+      Мы можем разработать приложение любой сложности для вашей компании
+    </p>
+    <div class="btn">Оставить заявку</div>
+  </div>
+</div>

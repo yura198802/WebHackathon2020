@@ -1,0 +1,10 @@
+{
+  "eslint.validate": ["vue", "javascript", "javascriptreact"],
+  "editor.formatOnSave": true,
+  "vetur.validation.template": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "prettier.useTabs": true,
+  "vetur.format.options.useTabs": true
+}

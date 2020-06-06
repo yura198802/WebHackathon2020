@@ -1,0 +1,12 @@
+<div class="why section">
+  <div class="container">
+    <h1>Почему мы?</h1>
+    <div class="row">
+      <div v-for="(tag, index) in items" :key="index" class="tag">
+        <img :src=" tag.img ? tag.img : 'images/euro.svg' " width="50px" />
+        <h3 v-html="tag.title" />
+        <p class="descr" v-html="tag.description" />
+      </div>
+    </div>
+  </div>
+</div>

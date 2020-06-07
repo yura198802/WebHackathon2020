@@ -1,0 +1,7 @@
+@import "@/assets/styles/global.scss";
+
+.container {
+	@include flex(space-between, center, nowrap, row);
+	@include contain();
+	width: auto;
+}

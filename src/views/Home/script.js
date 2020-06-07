@@ -1,6 +1,7 @@
 export default {
   name: "Home",
   components: {
+  	User: () => import('@/views/User/User.vue'),
     Slider: () => import("@/components/Slider/Slider.vue"),
     About: () => import("@/components/About/About.vue"),
     Services: () => import("@/components/Services/Services.vue"),

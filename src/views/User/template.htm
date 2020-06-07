@@ -1,0 +1,36 @@
+<div class="users">
+	<div class="container">
+		<div class="title">
+			<h2>Инструкции для пользвотеля</h2>
+
+			<h3>
+				Если чего-то нехватает - просто добавьте новую инструкцию, и уже через 5
+				минут она будет обработана
+			</h3>
+			<button v-on:click="getInfoNpaStatic">getInfoNpaStatic</button>
+			<button v-on:click="getInfoParagraphStatic">getInfoParagraphStatic</button>
+		</div>
+		<div class="row">
+			<div>
+				<div class="row-users">
+					{{data}}
+				</div>
+				<div class="row-users">
+					{{aiData1}}
+				</div>
+				<div class="row-users">
+					{{aiData2}}
+				</div>
+				<div class="row-users">
+					{{aiData3}}
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<form class="" v-on:submit.prevent="uploadDoc">
+				<input type="file" @change="changeDoc($event)" id="file-input" />
+				<button type="submit">загрузить документ</button>
+			</form>
+		</div>
+	</div>
+</div>

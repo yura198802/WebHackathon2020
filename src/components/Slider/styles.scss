@@ -1,5 +1,7 @@
 @import "@/assets/styles/global.scss";
 
+
+
 .slide {
   @include flex(center, center, nowrap, column);
   width: 100%;
@@ -10,13 +12,19 @@
   margin-top: 0px;
 
   .container {
-    @include flex(center, center, nowrap, column);
+    @include flex(space-between, center, nowrap, row);
     @include contain();
+		width: auto;
   }
+
+	img {
+		color: white;
+	}
 
   article {
     width: 50%;
   }
+
   h1 {
     position: relative;
     color: #fff;

@@ -2,26 +2,20 @@ export default {
 	name: "users",
 	data() {
 		return {
-			users: [],
-			newUser: {
-				account: "",
-				name: "",
-				surname: "",
-				middlename: ""
-			}
+			docs: []
 		};
 	},
 	components: {},
 	mounted() {
-		this.getUsers();
+		this.getDocs();
 	},
 	methods: {
-		getUsers() {
+		getDocs() {
 			let vm = this;
 			this.$http
-				.post("/User/GetUsers")
+				.post("/User/GetDocumentLoader")
 				.then(function(response) {
-					vm.users = response.data;
+					vm.docs = response.data;
 				})
 				.catch(function(error) {});
 		},

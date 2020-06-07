@@ -1,16 +1,16 @@
 <div class="users">
 	<div class="container">
 		<div class="title">
-			<h2>Выберите пользователя</h2>
+			<h2>Список всех документов</h2>
 
-			<h3>или добавьте новго пользователя!</h3>
+			<h3>Каждый документ можно привязать к любому пользователю</h3>
 		</div>
 		<div class="row">
 			
 				
 			</div>
 				<div class="row-users">
-					<form v-on:submit.prevent="addUser" class="row-user">
+					<!-- <form v-on:submit.prevent="addUser" class="row-user">
 						<input type="text" placeholder="Фамилия" v-model="newUser.surname" />
 						<input type="text" placeholder="Имя" v-model="newUser.name" />
 						<input
@@ -20,17 +20,8 @@
 						/>
 						<input type="text" placeholder="Логин" v-model="newUser.account" />
 						<button>Добавить</button>
-					</form>
-					<div
-						v-for="user in users"
-						:key="user.id"
-						class="row-user"
-						v-on:click="$router.push({path: `/demo/users/${user.id}`})"
-					>
-						<div class="avatar"></div>
-						<div class="surname">{{user.name}} {{user.middlename}},</div>
-						<div class="pname">{{user.surname}}</div>
-					</div>
+					</form> -->
+					{{docs}}
 				</div>
 			</div>
 		</div>
